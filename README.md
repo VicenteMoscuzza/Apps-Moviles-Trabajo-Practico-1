@@ -1,4 +1,4 @@
-# Proyecto Android - Ingeniería de Software
+# Proyecto Android - Aplicaciones Móviles
 
 Aplicación desarrollada en Android Studio como parte del trabajo práctico 1 de la materia Aplicaciones Móviles.
 
