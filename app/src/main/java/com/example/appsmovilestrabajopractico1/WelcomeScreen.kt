@@ -2,15 +2,19 @@ package com.example.appsmovilestrabajopractico1
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavHostController
 
 @Composable
-fun WelcomeScreen() {
+fun WelcomeScreen(navController: NavHostController) {
     var platform by remember { mutableStateOf("") }
     var programming by remember { mutableStateOf(false) }
     var networks by remember { mutableStateOf(false) }
@@ -23,7 +27,11 @@ fun WelcomeScreen() {
         .fillMaxSize()
         .padding(16.dp)) {
 
-        Text(text = "¡Bienvenido!", style = MaterialTheme.typography.headlineMedium)
+        IconButton(onClick = { navController.navigate("login") }) {
+            Icon(Icons.Filled.ArrowBack, contentDescription = "Volver", tint = Color.Black)
+        }
+
+        Text(text = "¡Bienvenido a la aplicación Juan Torres!", style = MaterialTheme.typography.headlineMedium)
 
         Spacer(modifier = Modifier.height(24.dp))
 

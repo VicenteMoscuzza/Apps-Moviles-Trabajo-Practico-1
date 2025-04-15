@@ -30,10 +30,10 @@ fun RegisterScreen(navController: NavHostController) {
                     .weight(1f)
                     .padding(24.dp),
             )
-
-            IconButton(onClick = { navController.navigate("welcome") }) {
+            IconButton(onClick = { navController.navigate("login") }) {
                 Icon(Icons.Filled.ArrowBack, contentDescription = "Volver", tint = Color.Black)
             }
+
         }
 
         Column(
